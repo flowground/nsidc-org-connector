@@ -1,0 +1,60 @@
+{
+    "type": "object",
+    "properties": {
+        "searchTerms": {
+            "required": false,
+            "type": "string"
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "default": 25
+        },
+        "startIndex": {
+            "required": false,
+            "type": "integer",
+            "default": 1
+        },
+        "spatial": {
+            "required": false,
+            "type": "string",
+            "default": "-180.0,-90.0,180.0,90.0"
+        },
+        "sortKeys": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "score,,desc",
+                "spatial_area,,asc",
+                "spatial_area,,desc",
+                "temporal_duration,,asc",
+                "temporal_duration,,desc",
+                "updated,,desc"
+            ],
+            "default": "score,,desc"
+        },
+        "startDate": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "endDate": {
+            "required": false,
+            "type": "string",
+            "format": "date"
+        },
+        "facetFilters": {
+            "required": false,
+            "type": "string"
+        },
+        "source": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "NSIDC",
+                "ADE"
+            ],
+            "default": "NSIDC"
+        }
+    }
+}

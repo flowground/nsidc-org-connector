@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "q": {
+            "required": true,
+            "type": "string"
+        },
+        "source": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "NSIDC",
+                "ADE"
+            ],
+            "default": "NSIDC"
+        }
+    }
+}
